@@ -28,7 +28,6 @@ public enum PersonSexType : Int {
 public class Person : NSObject {
     public var sexType: PersonSexType
 }
-
 ```
 
  ![screenshot_testMacro_2016_03_04_23_48_48](./screenshot_testMacro_2016_03_04_23_48_48.png)
@@ -37,7 +36,7 @@ public class Person : NSObject {
 
 
 
-## Q2: 复杂的宏改何去何从?
+## Q2: 复杂的宏该何去何从?
 
 
 
