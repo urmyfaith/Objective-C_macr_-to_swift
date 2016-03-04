@@ -10,4 +10,7 @@
 
 @implementation Person
 
+-(void)printColor{
+    NSLog(@"%@",UIColorFromRGB(0xffeedd,0.5));
+}
 @end
