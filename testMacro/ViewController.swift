@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         testPersonSexType()
         testMacroReplacement1()
         testMacroReplacement2()
+        testSizeStruct();
+        testSizeStructExternConst();
     }
 
     func testPersonSexType(){
@@ -43,6 +45,17 @@ class ViewController: UIViewController {
 
     func testMacroReplacement2(){
         print(UIColorFromRGB(0xffddee, alpha: 0.5))
+    }
+
+    func testSizeStruct(){
+        let adView = ADView()
+        adView.printADSize()
+    }
+
+    func testSizeStructExternConst(){
+        let adView = ADView()
+        adView.printADSize()
+        print(MOPUB_BANNER_SIZE)
     }
 }
 

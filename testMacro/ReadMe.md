@@ -131,3 +131,74 @@ testMacroReplacement2()
 
 
 
+## Q3: 结构体转换
+
+在OC中会有这样的情况:
+
+```objective-c
+#define AD_SIZE CGSizeMake(320, 50)
+
+@interface ADView : UIView
+@property (nonatomic, assign) CGSize adSize;
+-(void)printADSize;
+@end
+
+@implementation ADView
+-(void)printADSize{
+    NSLog(@"%@",NSStringFromCGSize(AD_SIZE));
+}
+@end	
+```
+
+在swift中呢,我们也是可以直接调用`printADSize`方法的:
+
+```swift
+ func testSizeStruct(){
+     let adView = ADView()
+     adView.printADSize()
+ }
+ 
+/*
+ 2016-03-05 00:28:26.984 testMacro[5759:213046] {320, 50}
+*/
+```
+
+如果我们想要在OC和swift中都能用,那么可以:
+
+在.h和.m中这样实现:
+
+```
+//  ADView.h
+extern CGSize const MOPUB_BANNER_SIZE;
+
+//  ADView.m
+#import "ADView.h"
+CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
+```
+
+在swift中可以这样使用:
+
+```swift
+ func testSizeStructExternConst(){
+     let adView = ADView()
+     adView.printADSize()
+     print(MOPUB_BANNER_SIZE)
+ }
+ /*
+ 2016-03-05 00:36:13.002 testMacro[5924:223091] {320, 50}
+(320.0, 50.0)
+ */
+```
+
+
+
+
+
+## 参考资料:
+
+- https://www.andrewcbancroft.com/2015/01/29/converting-complex-objective-c-macros-swift-functions/
+- https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20
+- http://stackoverflow.com/questions/24133695/how-to-use-objective-c-code-with-define-macros-in-swift
+
+
+
