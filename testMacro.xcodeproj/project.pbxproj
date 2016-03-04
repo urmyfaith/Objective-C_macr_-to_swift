@@ -12,6 +12,7 @@
 		FB1087751C89E35C00B43791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1087731C89E35C00B43791 /* Main.storyboard */; };
 		FB1087771C89E35C00B43791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1087761C89E35C00B43791 /* Assets.xcassets */; };
 		FB10877A1C89E35C00B43791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1087781C89E35C00B43791 /* LaunchScreen.storyboard */; };
+		FB1087841C89E37300B43791 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1087831C89E37300B43791 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		FB1087761C89E35C00B43791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB1087791C89E35C00B43791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB10877B1C89E35C00B43791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB1087811C89E37300B43791 /* testMacro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testMacro-Bridging-Header.h"; sourceTree = "<group>"; };
+		FB1087821C89E37300B43791 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FB1087831C89E37300B43791 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,13 @@
 			children = (
 				FB10876F1C89E35C00B43791 /* AppDelegate.swift */,
 				FB1087711C89E35C00B43791 /* ViewController.swift */,
+				FB1087821C89E37300B43791 /* Person.h */,
+				FB1087831C89E37300B43791 /* Person.m */,
 				FB1087731C89E35C00B43791 /* Main.storyboard */,
 				FB1087761C89E35C00B43791 /* Assets.xcassets */,
 				FB1087781C89E35C00B43791 /* LaunchScreen.storyboard */,
 				FB10877B1C89E35C00B43791 /* Info.plist */,
+				FB1087811C89E37300B43791 /* testMacro-Bridging-Header.h */,
 			);
 			path = testMacro;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1087841C89E37300B43791 /* Person.m in Sources */,
 				FB1087721C89E35C00B43791 /* ViewController.swift in Sources */,
 				FB1087701C89E35C00B43791 /* AppDelegate.swift in Sources */,
 			);
@@ -249,10 +257,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = testMacro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = z2xy.testMacro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testMacro/testMacro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +271,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = testMacro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = z2xy.testMacro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testMacro/testMacro-Bridging-Header.h";
 			};
 			name = Release;
 		};
