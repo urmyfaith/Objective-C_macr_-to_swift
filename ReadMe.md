@@ -31,7 +31,7 @@ public class Person : NSObject {
 
 ```
 
- ![screenshot_testMacro_2016_03_04_23_48_48](../screenshot_testMacro_2016_03_04_23_48_48.png)
+ ![screenshot_testMacro_2016_03_04_23_48_48](./screenshot_testMacro_2016_03_04_23_48_48.png)
 
 
 
@@ -98,7 +98,7 @@ alpha:alphaValue]
 ```swift
  let p =  Person()
   p.printColor()
-  
+
   /*
   testMacro[5226:193263] UIDeviceRGBColorSpace 1 0.933333 0.866667 0.5
   */
@@ -157,7 +157,7 @@ testMacroReplacement2()
      let adView = ADView()
      adView.printADSize()
  }
- 
+
 /*
  2016-03-05 00:28:26.984 testMacro[5759:213046] {320, 50}
 */
@@ -192,7 +192,7 @@ CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
 
 
 
-![screenshot_testMacro_2016_03_05_00_40_56](../screenshot_testMacro_2016_03_05_00_40_56.png)
+![screenshot_testMacro_2016_03_05_00_40_56](./screenshot_testMacro_2016_03_05_00_40_56.png)
 
 
 
@@ -204,7 +204,7 @@ CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
 - 在辅助编辑器左上角选择`Generated Interface`
 - Done
 
- ![show-generated-interface](../show-generated-interface.png)
+  ![show-generated-interface](./show-generated-interface.png)
 
 ## 参考资料:
 
@@ -212,6 +212,4 @@ CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
 - https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20
 - http://stackoverflow.com/questions/24133695/how-to-use-objective-c-code-with-define-macros-in-swift
 - http://blog.koder.me/ios/2015/11/13/ObjectiveC-Macros-to-swift-constants.html
-
-
 
