@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+typedef NS_ENUM(NSInteger, PersonSexType) {
+    PersonSexTypeMale,
+    PersonSexTypeFemale,
+    PersonSexTypeNeuter
+};
 
+@interface Person : NSObject
+@property (nonatomic, assign) PersonSexType sexType;
 @end
