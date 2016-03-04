@@ -192,13 +192,26 @@ CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
 
 
 
+![screenshot_testMacro_2016_03_05_00_40_56](../screenshot_testMacro_2016_03_05_00_40_56.png)
 
+
+
+## Tip:从OC头文件显示转换成Swift接口文件
+
+- 打开.h头文件
+- 显示辅助编辑器(alt+appleKey+enter) (`View`>`Assistant Editor`>`Show Assistant Editor`)
+- 选择同样的.h头文件
+- 在辅助编辑器左上角选择`Generated Interface`
+- Done
+
+ ![show-generated-interface](../show-generated-interface.png)
 
 ## 参考资料:
 
 - https://www.andrewcbancroft.com/2015/01/29/converting-complex-objective-c-macros-swift-functions/
 - https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20
 - http://stackoverflow.com/questions/24133695/how-to-use-objective-c-code-with-define-macros-in-swift
+- http://blog.koder.me/ios/2015/11/13/ObjectiveC-Macros-to-swift-constants.html
 
 
 
