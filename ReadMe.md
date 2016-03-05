@@ -195,6 +195,72 @@ CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
 
 
 
+## Q4: block在swift中怎么使用?
+
+在OC中的block,例如:
+
+```objective-c
+typedef void(^VoidBlock)();
+typedef void(^IntBlock)(NSInteger value);
+typedef void(^BoolBlock)(BOOL value);
+typedef void(^ProgressBlock)(CGFloat progress);
+typedef void(^ErrorBlock)(NSError *error);
+
+
+@interface BlockDefineTest : NSObject
+
+-(void)testFireBlock:(IntBlock )mIntBlock;
+@end
+  
+@implementation BlockDefineTest
+-(void)testFireBlock:(IntBlock )mIntBlock{
+    mIntBlock(5);
+}
+@end	
+```
+
+可以看到被转换后的头文件(见Tips)
+
+```swift
+public typealias VoidBlock = () -> Void
+public typealias IntBlock = (Int) -> Void
+public typealias BoolBlock = (Bool) -> Void
+public typealias ProgressBlock = (CGFloat) -> Void
+public typealias ErrorBlock = (NSError!) -> Void
+
+public class BlockDefineTest : NSObject {
+    
+    public func testFireBlock(mIntBlock: IntBlock!)
+}
+```
+
+也就是说之前的block现在变成了一个闭包.
+
+看看怎么使用:
+
+```swift
+ func testBlock(){
+
+     let mBlock = BlockDefineTest()
+
+     let mmIntBlock = {
+         (x: Int) -> Void in
+         print(x)
+     }
+     mBlock.testFireBlock(mmIntBlock)
+
+     mBlock.testFireBlock { (y: Int) -> Void in
+         print(y+y)
+     }
+ }
+```
+
+
+
+ ![blockToClosure](screenshot_testMacro_2016_03_05_14_23_34.png)
+
+
+
 ## Tip:从OC头文件显示转换成Swift接口文件
 
 - 打开.h头文件
@@ -211,4 +277,3 @@ CGSize const MOPUB_BANNER_SIZE = { .width = 320.0f, .height = 50.0f };
 - https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20
 - http://stackoverflow.com/questions/24133695/how-to-use-objective-c-code-with-define-macros-in-swift
 - http://blog.koder.me/ios/2015/11/13/ObjectiveC-Macros-to-swift-constants.html
-

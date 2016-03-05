@@ -28,8 +28,9 @@ class ViewController: UIViewController {
         testPersonSexType()
         testMacroReplacement1()
         testMacroReplacement2()
-        testSizeStruct();
-        testSizeStructExternConst();
+        testSizeStruct()
+        testSizeStructExternConst()
+        testBlock()
     }
 
     func testPersonSexType(){
@@ -56,6 +57,21 @@ class ViewController: UIViewController {
         let adView = ADView()
         adView.printADSize()
         print(MOPUB_BANNER_SIZE)
+    }
+
+    func testBlock(){
+
+        let mBlock = BlockDefineTest()
+
+        let mmIntBlock = {
+            (x: Int) -> Void in
+            print(x)
+        }
+        mBlock.testFireBlock(mmIntBlock)
+
+        mBlock.testFireBlock { (y: Int) -> Void in
+            print(y+y)
+        }
     }
 }
 

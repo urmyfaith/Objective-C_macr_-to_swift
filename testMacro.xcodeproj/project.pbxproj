@@ -13,8 +13,9 @@
 		FB1087771C89E35C00B43791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1087761C89E35C00B43791 /* Assets.xcassets */; };
 		FB10877A1C89E35C00B43791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1087781C89E35C00B43791 /* LaunchScreen.storyboard */; };
 		FB1087841C89E37300B43791 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1087831C89E37300B43791 /* Person.m */; };
-		FB1087861C89E64F00B43791 /* ReadMe.md in Sources */ = {isa = PBXBuildFile; fileRef = FB1087851C89E64F00B43791 /* ReadMe.md */; };
 		FB1087891C89EDD700B43791 /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1087881C89EDD700B43791 /* ADView.m */; };
+		FB3F1FA01C8AAEC600EE45AD /* BlockDefineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3F1F9F1C8AAEC600EE45AD /* BlockDefineTest.m */; };
+		FB3F1FA61C8AB14200EE45AD /* ReadMe.md in Sources */ = {isa = PBXBuildFile; fileRef = FB3F1FA51C8AB14200EE45AD /* ReadMe.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +29,11 @@
 		FB1087811C89E37300B43791 /* testMacro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testMacro-Bridging-Header.h"; sourceTree = "<group>"; };
 		FB1087821C89E37300B43791 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		FB1087831C89E37300B43791 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		FB1087851C89E64F00B43791 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		FB1087871C89EDD700B43791 /* ADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
 		FB1087881C89EDD700B43791 /* ADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADView.m; sourceTree = "<group>"; };
+		FB3F1F9E1C8AAEC600EE45AD /* BlockDefineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDefineTest.h; sourceTree = "<group>"; };
+		FB3F1F9F1C8AAEC600EE45AD /* BlockDefineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDefineTest.m; sourceTree = "<group>"; };
+		FB3F1FA51C8AB14200EE45AD /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 		FB1087631C89E35B00B43791 = {
 			isa = PBXGroup;
 			children = (
+				FB3F1FA51C8AB14200EE45AD /* ReadMe.md */,
 				FB10876E1C89E35C00B43791 /* testMacro */,
 				FB10876D1C89E35C00B43791 /* Products */,
 			);
@@ -65,6 +69,8 @@
 			children = (
 				FB10876F1C89E35C00B43791 /* AppDelegate.swift */,
 				FB1087711C89E35C00B43791 /* ViewController.swift */,
+				FB3F1F9E1C8AAEC600EE45AD /* BlockDefineTest.h */,
+				FB3F1F9F1C8AAEC600EE45AD /* BlockDefineTest.m */,
 				FB1087821C89E37300B43791 /* Person.h */,
 				FB1087831C89E37300B43791 /* Person.m */,
 				FB1087871C89EDD700B43791 /* ADView.h */,
@@ -74,7 +80,6 @@
 				FB1087781C89E35C00B43791 /* LaunchScreen.storyboard */,
 				FB10877B1C89E35C00B43791 /* Info.plist */,
 				FB1087811C89E37300B43791 /* testMacro-Bridging-Header.h */,
-				FB1087851C89E64F00B43791 /* ReadMe.md */,
 			);
 			path = testMacro;
 			sourceTree = "<group>";
@@ -152,8 +157,9 @@
 			files = (
 				FB1087841C89E37300B43791 /* Person.m in Sources */,
 				FB1087721C89E35C00B43791 /* ViewController.swift in Sources */,
-				FB1087861C89E64F00B43791 /* ReadMe.md in Sources */,
 				FB1087701C89E35C00B43791 /* AppDelegate.swift in Sources */,
+				FB3F1FA01C8AAEC600EE45AD /* BlockDefineTest.m in Sources */,
+				FB3F1FA61C8AB14200EE45AD /* ReadMe.md in Sources */,
 				FB1087891C89EDD700B43791 /* ADView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +315,7 @@
 				FB1087801C89E35C00B43791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
